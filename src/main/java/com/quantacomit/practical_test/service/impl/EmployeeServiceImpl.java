@@ -227,7 +227,6 @@ public class EmployeeServiceImpl implements EmployeeService {
 
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(employees);
         Map<String, Object> parameters = new HashMap<>();
-//        parameters.put("createdBy", "Your Company");
 
         Resource resource = resourceLoader.getResource("classpath:reports/employee_list.jrxml");
 
