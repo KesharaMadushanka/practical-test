@@ -1,0 +1,340 @@
+{
+	"info": {
+		"_postman_id": "831748e7-be72-4f98-963f-95b046feaa6d",
+		"name": "Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30571980",
+		"_collection_link": "https://martian-meadow-173711.postman.co/workspace/TecHub99~7d686975-4aee-434e-a0af-7d0a120f8963/collection/30571980-831748e7-be72-4f98-963f-95b046feaa6d?action=share&source=collection_link&creator=30571980"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"admin2\",\r\n    \"password\": \"1234563\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/larocher/auth/signin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"larocher",
+								"auth",
+								"signin"
+							]
+						},
+						"description": "\n### Sign In\nThis endpoint allows users to sign in and authenticate their identity.\n\n- Method: POST\n- URL: `localhost:8080/api/v1/larocher/auth/signin`\n\n#### Request Body\n- Type: Raw\n  - `username` (string): The username of the user.\n  - `password` (string): The password of the user.\n\n#### Response\n- Status: 401\n- Content-Type: application/json\n```json\n{\n    \"statusCode\": 0,\n    \"message\": \"\",\n    \"dateTime\": 0\n}\n```\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Signup User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"afgfdffdfdbgffbg\",\r\n    \"email\":\"adminfddff@gffbfbger.com\",\r\n    \"password\":\"1234567\",\r\n    \"role\": [\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/larocher/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"larocher",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "\nThis API endpoint allows users to sign up for a La Rocher account. Upon successful execution, the server responds with a status code of 200 and a JSON object containing a message.\n\n### Request Body\n- `username` (string): The username of the user signing up.\n- `email` (string): The email address of the user signing up.\n- `password` (string): The password chosen by the user.\n- `role` (array): An array containing the role(s) of the user.\n\n### Response\n- Status: 200\n- Content-Type: application/json\n- `message` (string): A message indicating the outcome of the signup process.\n\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Signup Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"admin\",\r\n    \"email\":\"admin@test.com\",\r\n    \"password\":\"1234567\",\r\n    \"role\": [\"admin\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/larocher/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"larocher",
+								"auth",
+								"signup"
+							]
+						},
+						"description": "\nThis API endpoint allows users to sign up for a La Rocher account. Upon successful execution, the server responds with a status code of 200 and a JSON object containing a message.\n\n### Request Body\n- `username` (string): The username of the user signing up.\n- `email` (string): The email address of the user signing up.\n- `password` (string): The password chosen by the user.\n- `role` (array): An array containing the role(s) of the user.\n\n### Response\n- Status: 200\n- Content-Type: application/json\n- `message` (string): A message indicating the outcome of the signup process.\n\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Add new employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzIxMTIzMjIwLCJleHAiOjE3MjExMjY4MjB9.ESgoi9bQSBmlqlTfq5GmzwhqtsoJ7-OYHC1nQipvPDM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"employee 1\",\r\n    \"contactNo\": \"0719561619\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/practical/employee/addNewEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"practical",
+								"employee",
+								"addNewEmployee"
+							]
+						},
+						"description": "### Add New Employee\n\nThis endpoint allows you to add a new employee to the practical system.\n\n#### Request Body\n\n- `name` (string, required): The name of the employee.\n    \n- `contactNo` (string, required): The contact number of the employee.\n    \n- `dateOfBirth` (string, required): The date of birth of the employee.\n    \n\n#### Response\n\nThe response is in JSON format and follows the schema below:\n\n``` json\n{\n    \"type\": \"object\",\n    \"properties\": {\n        \"statusCode\": {\n            \"type\": \"number\"\n        },\n        \"message\": {\n            \"type\": \"string\"\n        },\n        \"data\": {\n            \"type\": \"object\",\n            \"properties\": {\n                \"id\": {\n                    \"type\": \"number\"\n                },\n                \"name\": {\n                    \"type\": \"string\"\n                },\n                \"employeeCode\": {\n                    \"type\": \"string\"\n                },\n                \"contactNo\": {\n                    \"type\": \"string\"\n                },\n                \"dateOfBirth\": {\n                    \"type\": \"string\"\n                },\n                \"currentAgeInDays\": {\n                    \"type\": \"number\"\n                }\n            }\n        },\n        \"dateTime\": {\n            \"type\": \"string\"\n        },\n        \"dataCount\": {\n            \"type\": \"null\"\n        },\n        \"pages\": {\n            \"type\": \"null\"\n        }\n    }\n}\n\n ```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyQHRlc3QuY29tIiwiaWF0IjoxNzIxMTIzMjIwLCJleHAiOjE3MjExMjY4MjB9.ESgoi9bQSBmlqlTfq5GmzwhqtsoJ7-OYHC1nQipvPDM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"employee 1\",\r\n    \"contactNo\": \"0719561619\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/practical/employee/addNewEmployee",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"practical",
+								"employee",
+								"addNewEmployee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get Employee By Employee Code",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "get all employees",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Employee",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTcyMTEzNzQ0OCwiZXhwIjoxNzIxMTQxMDQ4fQ.-gUKw6t7mKM0_BD9i5j37wUZsKkQapw8FC7fxv8edbo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/practical/employee/deleteEmployee/EMP0005",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"practical",
+								"employee",
+								"deleteEmployee",
+								"EMP0005"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload profile picture",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTcyMTE0MDEyOCwiZXhwIjoxNzIxMTQzNzI4fQ.4ETbu6HQUVyCzF21p6rA-rlsVK1uwPGN8YxZxeafDmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/Kesha/OneDrive/Pictures/Screenshot 2024-07-09 121246.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/practical/employee/EMP0005/uploadProfilePicture",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"practical",
+								"employee",
+								"EMP0005",
+								"uploadProfilePicture"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "download proilie picture",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkB0ZXN0LmNvbSIsImlhdCI6MTcyMTE0MDEyOCwiZXhwIjoxNzIxMTQzNzI4fQ.4ETbu6HQUVyCzF21p6rA-rlsVK1uwPGN8YxZxeafDmY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/practical/employee/downloadProfilePicture/EMP0003",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"practical",
+								"employee",
+								"downloadProfilePicture",
+								"EMP0003"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pdf list report",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
