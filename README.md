@@ -7,10 +7,16 @@
 
 ## Setup
 
-### Database Configuration
-The application requires database configurations to be set in the `application.properties` file. Please update the following properties with your database details:
+## Database Configuration
 
 ```properties
 # Database Configuration
 spring.datasource.username=yourusername
 spring.datasource.password=yourpassword
+```
+
+## Postman Collection
+A Postman collection is included in the project to help you test the APIs. The collection file is located at:
+
+`src/main/resources/postman/practical_test.postman_collection.json`
+
